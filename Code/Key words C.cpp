@@ -3,28 +3,26 @@
 #include<string.h>
 #include <stdlib.h>
 #include<unistd.h>
-//#include <locale.h>
-//#include <ctype.h>
-int i,q;              // i usado no for, q usado no for dentro do for...
-char d[100];          //determina Criptografar ou descriptografar
-//int s=2;             
-int g;        //
-int a=0;      //
-int w=0;      //
-int z=0;      //
-int u=0;      //serve para o for nao repedi p processo aonde nao e mais nessecario
+
+int i,q;              
+char d[100];          
+          
+int g;        
+int a=0;      
+int w=0;      
+int z=0;      
+int u=0;      
 char x[100],  //Palavra chave
 y[100000000], //Entrada de Texto Grande
-t[100],       // alfabeto que é transformado em um novo
-r[100];       //serve de compração ao alterado alfabeto
-char h[100];  // alfabeto de comparaçãe  em maiusculo
-int k;        //
+t[100],       // alfabeto que Ã© transformado em um novo
+r[100];       //serve de compraÃ§Ã£o ao alterado alfabeto
+char h[100];  // alfabeto de comparaÃ§Ã£e  em maiusculo
+int k;        
 int b=0;      //determina um local a comparar ao anterior
 int s=2;
 
 int main(){
 	
-   //setlocale (LC_ALL,"portuguese");
    strcpy(r,"abcdefghijklmnopqrstuvwxyz");
 	while(s==2){
 	system ("cls");
@@ -39,7 +37,7 @@ int main(){
 	printf("Digite a Palavra Chave:");
 	gets( x);
     
-	for(i=0;i<strlen(x);i++){        //Palavra chave transforma caracteres repetidos em espaço
+	for(i=0;i<strlen(x);i++){        //Palavra chave transforma caracteres repetidos em espaÃ§o
 	u=1;
 	for(q=i+1;q<strlen(x);q++){
 	if((x[i]==x[q])&&(u==1)){
@@ -84,14 +82,6 @@ strcpy(t,"abcdefghijklmnopqrstuvwxyz");
 	z++;
 	t[i]=y[z];
 	}}
-//	printf("Igual a==");
-//	printf(x);
-//	printf(",  ");
-//	printf(y);
-//	printf(",   ");
-//	printf(t);
-//	printf("\n");
-//	printf("Digite o Texto:");
 	
     gets( y);
     for(i=0;i<strlen(y);i++){	//crip
